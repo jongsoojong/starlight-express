@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 
 const numbers = require('./Data/numbers');
 const people = require('./Data/people');
 
 const app = express();
+
+app.use(cors());
 
 app.get('/', (req, res) => {
 	res.send('Hello there');
